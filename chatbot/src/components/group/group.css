@@ -1,0 +1,42 @@
+/* whats home page groups */
+.chatGroup{
+    background-color: white;
+    font-family: sans-serif;
+    display: flex;
+    border-top: 0.1em solid #e9ecef;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* group user icon style */
+i.fa-user-circle{
+    color: grey;
+   font-size: 40px;
+   margin: 0px 7px 0px 7px;
+}
+
+/* group main div */
+.groupdivName{
+    width: 60%;
+    margin: 5px 0px 5px 0px;
+}
+
+/* group name style */
+.chatGroup h5{
+    font-size: 14px;
+    margin: 5% 0% 0% 2%;
+}
+
+/* last message of each group time style*/
+.lastmsgTime{
+    color: lightgrey;
+    font-size: 12px;
+    margin: 0% 0% 8% 0%;
+}
+
+/* last message of each group style */
+.lastgroupMsg{
+    color: lightgrey;
+    font-size: 12px;
+}
+
