@@ -4,69 +4,74 @@ import './chat.css';
 import Message from '../message/Message'
 import ReactScrollToBottom from "react-scroll-to-bottom"
 import {useHistory} from 'react-router-dom';
-import {users} from '../group/Group';
+import {user} from '../group/Group';
 
-let usermsg="Ram"
+
 
 const ENDPOINT="http://localhost:4500/";
 function Chat() {
-     //console.log(users)
-     const [user]=useState(13);
-     var [msg,setMsg]=useState("")
+     const [numberuser]=useState(13);
+    // var [message,setMsg]=useState("")
      const [id,setid]=useState("")
      const [messages,setMessage]=useState([])
-     const socket=socketIO(ENDPOINT,{transports:['websocket']});
-
      const history=useHistory();
+
+
+     console.log(messages)
      const backHome=()=>{
          history.replace('','http://localhost:3000/chat')
      }
-
-     const search=evt=>{
+    
+     const sendMsg=evt=>{
+         const socket=socketIO(ENDPOINT,{transports:['websocket']});
       if(evt.key==="Enter"){
-            const message=document.getElementById('inputMessage').value;
-                //console.log(message)
-                socket.emit(`message`,(message,id))
-                let c=document.getElementById("inputMessage").value=""
-                setMsg(c)
+            const   message=document.getElementById('inputMessage').value;
+                socket.emit(`message`,{message,id})
+                
             if(message.length>0){
-              usermsg=message
+              setMessage([...messages,{user:'Ram',message:`${message}`,classs:'left'}])
+              document.getElementById('inputMessage').value=""
           }
       }
   }
-
+ 
+   
 
     useEffect(()=>{
+        const socket=socketIO(ENDPOINT,{transports:['websocket']});
         socket.on('connect',()=>{
-        //alert('coonected');
        setid(socket.id)
     })
-
-    socket.emit('joined',{usermsg})
+    ///console.log(socket)
+    socket.emit('joined',{user})
 
     socket.on('welcome',(data)=>{
-            setMessage([...messages,data])
-            //console.log(data.usermsg,data.message)
+           setMessage([...messages,data])
+            //console.log(data.user,data.message)
         })
     socket.on('userJoinde',(data)=>{
-        setMessage([...messages,data])
-        //console.log(data.usermsg,data.message);
+       setMessage([...messages,data])
+        //console.log(data.user,data.message);
+    })
+    socket.on('leave',(data)=>{
+        //console.log(data.user, data.message)
     })
     return ()=>{
         //socket.emit('disconnect');
-        //socket.off()
+        socket.off()
     }
     },[])
 
     useEffect(()=>{
-        socket.on(`sendMessage`,(data)=>{
+         const socket=socketIO(ENDPOINT,{transports:['websocket']});
+        socket.on('sendMessage',(data)=>{
             setMessage([...messages,data])
-            console.log(data.usermsg,data.message,data.id)
+            //console.log(data.user,data.message,data.id)
         })
         return()=>{
-         socket.off();
+         socket.off()
         }
-    }, [messages])
+    }, [])
 
     return (
          <div className="homePage">
@@ -74,14 +79,14 @@ function Chat() {
                 <div className="addContact">
                     <p className="userInfo">
                         <i onClick={backHome} className="fas fa-chevron-left"></i>
-                        <span className="numberUser">{user}</span>
+                        <span className="numberUser">{numberuser}</span>
                         <span className="groupLogo"><i className="fas fa-users"></i></span>
-                        <span className="groupName">{users.slice(0,14)+".."}</span>
+                        <span className="groupName">{user.slice(0,14)+".."}</span>
                     </p>
                     <i className="fas fa-user-plus"></i>
                 </div>
                 <ReactScrollToBottom className="chatBox">
-                    {messages.map((item)=> <Message   user={item.id===id?'':'left'} message={item.usermsg} classs={item.id===id?'right':'left'} classs={item.id===id? 'right':'left'}/>)}
+                    {messages.map((item)=> <Message   user={item.id===id? 'Ram':item.user} message={item.message} classs={item.id===id? 'right':'left'}/>)}
                 </ReactScrollToBottom> 
                 <div className="sendMessageInfo">
                     <span className="messageFiled">
@@ -89,9 +94,9 @@ function Chat() {
                             <input type="text" 
                                 placeholder="Type a message" 
                                 //onClick={search}
-                                onKeyPress={search}
-                                onChange={e=>setMsg(e.target.value)}
-                                value={msg}
+                                onKeyPress={sendMsg}
+                                //onChange={e=>setMsg(e.target.value)}
+                                //value={message}
                                 id="inputMessage"
                             />
                         <i className="fas fa-folder-plus"></i>

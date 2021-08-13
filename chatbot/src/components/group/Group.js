@@ -2,7 +2,7 @@ import React from 'react'
 import './group.css';
 import {useHistory} from 'react-router-dom'
 
-let users="Ram"
+let user="Ram"
 
 function Group(props) {
     const history=useHistory();
@@ -10,7 +10,7 @@ function Group(props) {
     const clickEvent=(e)=>{
         //let groupname=document.getElementsByClassName("groupname")
         //console.log(e.target.textContent)
-        users=e.target.textContent;
+        user=e.target.textContent;
          history.push('chat')
     }
     return (
@@ -26,4 +26,4 @@ function Group(props) {
 }
 
 export default Group
-export {users}
+export {user}
