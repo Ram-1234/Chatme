@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 const cors= require('cors');
 const socketIO=require('socket.io');
+const hostname='143.110.247.144'
 //const { URLSearchParams } = require('url');
 
 const app=express();
@@ -37,6 +38,6 @@ io.on("connection",(socket)=>{
 
 });
 
-server.listen(port,()=>{
-    console.log(`Server is Working on http://localhost:${port}`)
+server.listen(port,hostname,()=>{
+    console.log(`Server is Working on http://${hostname}:${port}`)
 })
