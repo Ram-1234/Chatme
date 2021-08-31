@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Hosted Link: https://github.com/Ram-1234/chatBot
+Hosted Link: https://keen-bose-70128d.netlify.app/
 
 In the project directory, you can run:
 
