@@ -69,7 +69,7 @@ function Chat() {
                      {
                          messages.map((item)=> <Message 
                          classes={item.receiver.uid===user ? "right" : "left"}
-                         text={item.data.text}
+                         text={item.data.text.length>0 ? item.data.text:'please enter valid input!'}
                         />)  
                      }
                 </ReactScrollToBottom> 
