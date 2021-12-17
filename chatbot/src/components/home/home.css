@@ -1,89 +1,93 @@
 /* full body of whats app page */
-.homePage{
-    position: relative;
-    background-color: lightgray;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.homePage {
+  position: relative;
+  background-color: lightgray;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* message mobile view div */
-.homeContainer{
-    background-color: lightgrey;
-    position: relative;
-    border: 2px solid white;
-    height: 70%;
-    width: 20%;
-    
+.homeContainer {
+  background-color: lightgrey;
+  position: relative;
+  border: 2px solid white;
+  height: 85%;
+  width: 25%;
+  margin-bottom: 5%;
 }
 
 /* chat app header */
-.headerContents{
-    background-color: white;
-    display: flex;
-    border: 2px solid white;
-    justify-content: space-between;
-    align-items: center;
-     padding: 15px 0px 15px 0px;
-     /* border-bottom: 1px solid lightgrey; */
+.headerContents {
+  background-color: white;
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 15px 0px;
+  /* border-bottom: 1px solid lightgrey; */
 }
 
 /* header content style */
-.headerContents .chats, .headerContents .edit{
-    font-family: Arial, Helvetica, sans-serif;
+.headerContents .chats,
+.headerContents .edit {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* header content style */
-.edit,.fa-edit{
-    color: #48cae4;
+.edit,
+.fa-edit {
+  color: #48cae4;
+  cursor: pointer;
 }
 
 /* chat home page footer-icons */
-.chatInfo{
-    position: absolute;
-    bottom: 0%;
-    width: 99%;
-    background-color: white;
-    display: flex;
-    border: 2px solid white;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid lightgray;
+.chatInfo {
+  position: absolute;
+  bottom: 0%;
+  width: 99%;
+  background-color: white;
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightgray;
 }
 
 /* chat footer icons style*/
-.chatInfo i{
-    margin: 10px 0px 10px 0px;
-    color: #adb5bd;
+.chatInfo i {
+  margin: 10px 0px 10px 0px;
+  color: #adb5bd;
+  cursor: pointer;
 }
 
 /* chat footer icons hover style */
-.chatInfo i:hover{
-    transition: all 0.23s;
-    color: #48cae4;
+.chatInfo i:hover {
+  transition: all 0.23s;
+  color: #48cae4;
 }
 
 /* chat status icon style */
-.chatInfo .fa-circle-notch{
-    margin-left: 10px;
+.chatInfo .fa-circle-notch {
+  margin-left: 10px;
 }
 
 /*  header and footer right icon style*/
-.chatInfo .fa-cog, .headerContents .fa-edit{
-    margin-right: 10px;
+.chatInfo .fa-cog,
+.headerContents .fa-edit {
+  margin-right: 10px;
 }
 
 /* edit word left style */
-.edit{
-   margin-left: 10px;
+.edit {
+  margin-left: 10px;
 }
 
 /* auto scroll top-to bottom */
-.groupBox{
-    /* border: 2px solid black; */
-    height: 79%;
-    box-sizing: border-box;
+.groupBox {
+  /* border: 2px solid black; */
+  height: 81%;
+  box-sizing: border-box;
 }

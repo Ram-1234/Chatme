@@ -1,103 +1,105 @@
-.homePage{
-    position: relative;
-    background-color: lightgrey;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.homePage {
+  position: relative;
+  background-color: lightgrey;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* message mobile view div */
-.homeContainer{
-    background-color: lightgrey;
-    position: relative;
-    border: 2px solid white;
-    height: 70%;
-    width: 20%;
+.homeContainer {
+  background-color: lightgrey;
+  position: relative;
+  border: 2px solid white;
+  height: 80%;
+  width: 22%;
+  margin-bottom: 5%;
 }
-
 
 /* users main-div  */
-.addContact{
-    background-color: white;
-    display: flex;
-    border: 2px solid white;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid lightgrey;
+.addContact {
+  background-color: white;
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
 }
 
-
 /* grouplogo */
-.groupLogo{
-    border-radius: 50%;
-    font-size: 17px;
-    background-color: white;
-    margin-left: 7px;
+.groupLogo {
+  border-radius: 50%;
+  font-size: 17px;
+  background-color: white;
+  margin-left: 7px;
 }
 
 /* group icon */
-.groupLogo i{
-    padding: 10px 8px 10px 8px;
+.groupLogo i {
+  padding: 10px 8px 10px 8px;
 }
 
 /* groupname */
-.groupName{
-    font-family: sans-serif;
+.groupName {
+  font-family: sans-serif;
 }
 
 /* add user icon */
-.addContact i{
-    color: #00b4d8;
-    margin-right: 8px;
+.addContact i {
+  color: #00b4d8;
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 /* group back logo */
-.addContact .fa-chevron-left{
-    margin: 0px 8px 0 8px;
+.addContact .fa-chevron-left {
+  margin: 0px 8px 0 8px;
+  cursor: pointer;
 }
 
 /* number of user */
-.addContact .numberUser{
-    color: #48cae4;
+.addContact .numberUser {
+  color: #48cae4;
+  /* cursor: pointer; */
 }
 
-.addContact .fa-users{
-    border: 1px solid grey;
-    border-radius: 50px;
-    margin-right: 3px;
+.addContact .fa-users {
+  border: 1px solid grey;
+  border-radius: 50px;
+  margin-right: 3px;
 }
 
 /* send message main div */
-.sendMessageInfo{
-    background-color: white;
-    display: flex;
-    border: 2px solid white;
-    justify-content: space-between;
-    align-items: center;
+.sendMessageInfo {
+  background-color: white;
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* messageinfo set bottom */
-.sendMessageInfo{
-    position: absolute;
-    height: 40px;
-    width: 99%;
-    bottom: 0%;
-    left: 0%;
-    right: 0px;
-    border-top: 1px solid lightgray;
+.sendMessageInfo {
+  position: absolute;
+  height: 40px;
+  width: 99%;
+  bottom: 0%;
+  left: 0%;
+  right: 0px;
+  border-top: 1px solid lightgray;
 }
 
-.sendMessageInfo span{
-    padding: 10px 0px 10px 0px;
+.sendMessageInfo span {
+  padding: 10px 0px 10px 0px;
 }
 
 /* + icon style */
 
-.sendMessageInfo .fa-plus{
-    color: #60a3b1;
-    padding: 5px;
+.sendMessageInfo .fa-plus {
+  color: #60a3b1;
+  padding: 5px;
 }
 
 /* message span area */
@@ -105,39 +107,37 @@
      width: fit-content;
 } */
 /* input field style */
-.sendMessageInfo input{
-    outline: none;
-    border: 1px solid lightgray;
-    border-radius: 50px;
-    padding: 5px;
-   
+.sendMessageInfo input {
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  padding: 5px;
 }
 
 /* add file/folder input field */
-.sendMessageInfo .fa-folder-plus{
-    color: #00b4d8;
-    position: relative;
-    right: 25px;
-    font-size: small;
-
+.sendMessageInfo .fa-folder-plus {
+  color: #00b4d8;
+  position: relative;
+  right: 25px;
+  font-size: small;
+  cursor: pointer;
 }
 
 /* camera icon style*/
-.sendMessageInfo .fa-camera{
-    color: #00b4d8;
-    margin: 0px 10px 0px 0px;
+.sendMessageInfo .fa-camera {
+  color: #00b4d8;
+  margin: 0px 10px 0px 0px;
+  cursor: pointer;
 }
 
 /* speak search icon */
-.sendMessageInfo .fa-microphone{
-   color: #00b4d8;
-   margin: 0px 10px 0px 5px;
+.sendMessageInfo .fa-microphone {
+  color: #00b4d8;
+  margin: 0px 10px 0px 5px;
+  cursor: pointer;
 }
 
-.chatBox{
-    height: 74%;
-    box-sizing: border-box;
+.chatBox {
+  height: 75%;
+  box-sizing: border-box;
 }
-
-
-

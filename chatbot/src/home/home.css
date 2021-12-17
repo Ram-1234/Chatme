@@ -1,0 +1,32 @@
+.chathomeContainer {
+  /* border: 1px solid lightgrey; */
+  width: auto;
+  min-height: 650px;
+  padding: 2px;
+  justify-content: left;
+  align-items: center;
+}
+
+.homeContentContainer {
+  margin: 10%;
+  /* border-radius: 1px solid lightgrey; */
+  padding: 2px;
+  width: fit-content;
+}
+
+.letstMessage {
+  color: #71ad7b;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+.lesthomeConectButton button {
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  background-color: #71ad7b;
+  border: white;
+  border-radius: 5px;
+  color: white;
+}

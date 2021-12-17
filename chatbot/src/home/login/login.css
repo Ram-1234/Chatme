@@ -1,0 +1,32 @@
+.loginForm {
+  max-width: min-content;
+  margin: auto;
+  margin-top: 3%;
+  border: 3px solid #71ad7b;
+  border-radius: 5px;
+  padding: 0px 50px 50px 50px;
+  text-align: center;
+}
+
+.loginForm h1 {
+  color: #71ad7b;
+  font-family: sans-serif;
+}
+
+.loginInput {
+  border: 1px solid #71ad7b;
+  min-width: 200px;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+}
+.loginButton {
+  border: 1px solid #71ad7b;
+  min-width: 100%;
+  height: 30px;
+  color: grey;
+}
+
+.loginForm label {
+  color: #71ad7b;
+}

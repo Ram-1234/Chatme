@@ -1,0 +1,41 @@
+.headerContainer {
+  background-color: #dfede1;
+  width: 100%;
+  border: 1px solid lightgrey;
+  height: 100px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+
+.headerLogo {
+  width: fit-content;
+  font-size: medium;
+  margin-left: 50px;
+}
+
+.headerLogo img {
+  width: 100px;
+  height: 100px;
+}
+
+.homeAboutUser {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  margin-right: 40px;
+}
+.headerHome,
+.headerUser,
+.headerAbout {
+  /* border: 1px solid lightgrey; */
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  color: green;
+  text-transform: capitalize;
+}

@@ -1,20 +1,14 @@
 import React from 'react'
 import './message.css';
 
-function Message({user,message,classs}) {
-    if(user){
+function Message(props) {
+       console.log(props);
         return (
-        <div className={`messageBox ${classs}`}>
-            {`${user}: ${message}`}
+        <div className={`messageBox ${props.classes}`}>
+           {props.text}
         </div>
     )
-    }else{
-        return (
-        <div className={`messageBox ${classs}`}>
-           {`You: ${message}`}
-        </div>
-    )
-    }
+    
 }
 
 export default Message;
